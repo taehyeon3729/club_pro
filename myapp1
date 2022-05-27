@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('TextField'),
+          ),
+          body: Column(
+            children: [
+            Text('제목:'),
+            Expanded(
+              child: TextField(
+                keyboardType: TextInputType.multiline,
+                maxLines: 5,
+                minLines: 1,
+                decoration: const InputDecoration(
+                  hintText: '  ',
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  isDense: true,
+                  border: const OutlineInputBorder(
+                    gapPadding: 0,
+                    borderRadius: const BorderRadius.all(Radius.circular(4)),
+                    borderSide: BorderSide(
+                      width: 1,
+                      style: BorderStyle.none,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Text('222'),
+          ])),
+    );
+  }
+}
